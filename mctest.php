@@ -2,8 +2,9 @@
 
 $t1 = microtime(true);
 
+$mc = "ec2-23-22-89-24.compute-1.amazonaws.com";
 $memcache = new Memcache;
-$memcache->connect('10.193.34.113', 11211) or die ("Could not connect"); //connect to memcached server
+$memcache->connect($mc, 11211) or die ("Could not connect to $mc"); //connect to memcached server
 
 $v = htmlspecialchars($_GET["v"]);
 $c = htmlspecialchars($_GET["c"]);
