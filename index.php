@@ -13,17 +13,20 @@ mysql_close();
 
 echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center></b><br><br>";
 
+echo '<center>';
+
 $i=0;
 while ($i < $num) {
 
 $name=mysql_result($result,$i,"name");
 $value=mysql_result($result,$i,"value");
 
-
 echo "<b>$name:$value</b><br><hr><br>";
 
 $i++;
 }
+echo '</center>';
+
 echo "<b> Starting PHPINFO: </b><hr>";
 phpinfo();
 ?>
