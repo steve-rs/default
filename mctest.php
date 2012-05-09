@@ -1,5 +1,12 @@
 <?php
 
+$file = "/var/spool/cloud/meta-data/instance-id";
+if (file_exists($file)) {
+    ob_clean();
+    flush();
+    readfile($file);
+}
+
 $t1 = microtime(true);
 
 $mc = "ec2-23-22-89-24.compute-1.amazonaws.com";

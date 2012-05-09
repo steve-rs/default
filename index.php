@@ -13,7 +13,14 @@ mysql_close();
 
 echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center></b><br><br>";
 
-echo '<center>';
+$file = "/var/spool/cloud/meta-data/instance-id";
+if (file_exists($file)) {
+    ob_clean();
+    flush();
+    readfile($file);
+}
+
+echo '<p><center>';
 
 $i=0;
 while ($i < $num) {
