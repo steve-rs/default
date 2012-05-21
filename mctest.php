@@ -9,7 +9,7 @@ if (file_exists($file)) {
 
 $t1 = microtime(true);
 
-$mc = "ec2-23-22-89-24.compute-1.amazonaws.com";
+$mc = "ec2-107-20-207-192.compute-1.amazonaws.com";  # This is an EIP, so it will "never change"
 $memcache = new Memcache;
 $memcache->connect($mc, 11211) or die ("Could not connect to $mc"); //connect to memcached server
 
