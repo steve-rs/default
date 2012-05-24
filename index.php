@@ -4,38 +4,54 @@ include 'config/db.php';
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
-$query="SELECT * FROM app_test";
+$query="SELECT * FROM phptest";
 $result=mysql_query($query);
 
 $num=mysql_numrows($result);
 
 mysql_close();
 
-echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center></b><br><br>";
+echo "<center>";
+echo "<font size='+3'>";
 
+echo "Instance ID = ";
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
-    ob_clean();
-    flush();
+#    ob_clean();
+#    flush();
     readfile($file);
 }
+echo "<p>";
 
-echo 'HELLO';
-echo '<p><center>';
+echo "Zone = ";
+$file = "/var/spool/cloud/meta-data/placement-availability-zone";
+if (file_exists($file)) {
+#    ob_clean();
+#    flush();
+    readfile($file);
+}
+echo "<p>";
 
+echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
+
+echo "<table border=2 cellpadding=5>";
 $i=0;
 while ($i < $num) {
+   $id = mysql_result($result,$i, "id");
+   $fn = mysql_result($result,$i, "firstname");
+   $ln = mysql_result($result,$i, "lastname");
 
-$name=mysql_result($result,$i,"name");
-$value=mysql_result($result,$i,"value");
+   echo "<tr>";
+   echo "<td>$id</td><td>$fn</td><td>$ln</td>";
+   echo "</tr>";
 
-echo "<b>$name:$value</b><br><hr><br>";
-
-$i++;
+   $i++;
 }
+echo '</table>';
+echo '</font>';
 echo '</center>';
 
-echo "<b> Starting PHPINFO: </b><hr>";
-phpinfo();
+#echo "<b> Starting PHPINFO: </b><hr>";
+#phpinfo();
 ?>
 
