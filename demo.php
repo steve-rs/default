@@ -11,30 +11,30 @@ $num=mysql_numrows($result);
 
 mysql_close();
 
-echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center></b><br><br>";
+echo "<center>";
+echo "<font size='+3'>";
 
-echo "<h1>Instance ID = ";
+echo "Instance ID = ";
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
 #    ob_clean();
 #    flush();
     readfile($file);
 }
-echo "</h1><br>";
+echo "<p>";
 
-echo "<h1>Zone = ";
+echo "Zone = ";
 $file = "/var/spool/cloud/meta-data/placement-availability-zone";
 if (file_exists($file)) {
 #    ob_clean();
 #    flush();
     readfile($file);
 }
-echo "</h1><br>";
+echo "<p>";
 
-#echo 'HELLO';
-echo '<p><center>';
+echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
 
-echo "<table border=1>";
+echo "<table border=2 cellpadding=5>";
 $i=0;
 while ($i < $num) {
    $id = mysql_result($result,$i, "id");
@@ -48,6 +48,7 @@ while ($i < $num) {
    $i++;
 }
 echo '</table>';
+echo '</font>';
 echo '</center>';
 
 #echo "<b> Starting PHPINFO: </b><hr>";
