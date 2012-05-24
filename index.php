@@ -2,15 +2,6 @@
 
 include 'config/db.php';
 
-mysql_connect($hostname_DB,$username_DB,$password_DB);
-@mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
-$query="SELECT * FROM phptest";
-$result=mysql_query($query);
-
-$num=mysql_numrows($result);
-
-mysql_close();
-
 echo "<center>";
 echo "<font size='+3'>";
 
@@ -33,6 +24,13 @@ if (file_exists($file)) {
 echo "<p>";
 
 echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
+
+mysql_connect($hostname_DB,$username_DB,$password_DB);
+@mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
+$query="SELECT * FROM phptest";
+$result=mysql_query($query);
+$num=mysql_numrows($result);
+mysql_close();
 
 echo "<table border=2 cellpadding=5>";
 $i=0;
