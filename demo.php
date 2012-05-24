@@ -34,16 +34,20 @@ echo "</h1><br>";
 #echo 'HELLO';
 echo '<p><center>';
 
+echo "<table border=1>";
 $i=0;
 while ($i < $num) {
    $id = mysql_result($result,$i, "id");
    $fn = mysql_result($result,$i, "firstname");
    $ln = mysql_result($result,$i, "lastname");
 
-   echo "<b>$id:$fn:$ln</b><br><hr><br>";
+   echo "<tr>";
+   echo "<td>$id</td><td>$fn</td><td>$ln</td>";
+   echo "</tr>";
 
    $i++;
 }
+echo '</table>';
 echo '</center>';
 
 #echo "<b> Starting PHPINFO: </b><hr>";
