@@ -13,23 +13,23 @@ mysql_close();
 
 echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center></b><br><br>";
 
-echo "Instance ID = ";
+echo "<h1>Instance ID = ";
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
-    ob_clean();
-    flush();
+#    ob_clean();
+#    flush();
     readfile($file);
 }
-echo "<br>";
+echo "</h1><br>";
 
-echo "Zone = ";
+echo "<h1>Zone = ";
 $file = "/var/spool/cloud/meta-data/placement-availability-zone";
 if (file_exists($file)) {
-    ob_clean();
-    flush();
+#    ob_clean();
+#    flush();
     readfile($file);
 }
-echo "<br>";
+echo "</h1><br>";
 
 #echo 'HELLO';
 echo '<p><center>';
