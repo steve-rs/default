@@ -14,7 +14,7 @@ if (file_exists($file)) {
 }
 echo "<p>";
 
-echo "Zone = ";
+echo "Cloud = ";
 $file = "/var/spool/cloud/meta-data/placement-availability-zone";
 if (file_exists($file)) {
 #    ob_clean();
@@ -32,7 +32,9 @@ $result=mysql_query($query);
 $num=mysql_numrows($result);
 mysql_close();
 
-echo "<table border=2 cellpadding=5>";
+echo '</font>';
+echo "<font size='+4'>";
+echo "<table border=3 cellpadding=8>";
 $i=0;
 while ($i < $num) {
    $id = mysql_result($result,$i, "id");
