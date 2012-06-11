@@ -20,7 +20,7 @@ if (file_exists($file)) {
     readfile($file);
 }
 
-echo 'HELLO';
+#echo 'HELLO';
 echo '<p><center>';
 
 $i=0;
