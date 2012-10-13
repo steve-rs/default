@@ -6,6 +6,8 @@ include 'config/db.php';
 
 include 'menu.php';
 
+isset ( $database_DB ) or die( "No database name set");
+
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
 $query="SELECT * FROM app_test";
