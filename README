@@ -1,1 +1,5 @@
 README
+
+If you add or remove a php script, run:
+  ./create_menu.sh > menu.php
+commit and push
