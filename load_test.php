@@ -1,6 +1,9 @@
 <?php
 include 'config/db.php';
 
+    ob_clean();
+    flush();
+
 include 'menu.php';
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
@@ -16,8 +19,6 @@ echo "<b><center> Database($database_DB) Output From Host($hostname_DB)</center>
 
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
-    ob_clean();
-    flush();
     readfile($file);
 }
 
