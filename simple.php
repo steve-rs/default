@@ -1,4 +1,5 @@
 <?php
+include 'home.php';
 
 echo "<b><center>";
 
