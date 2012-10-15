@@ -3,13 +3,13 @@ include 'menu.php';
 
 echo "<b><center>";
 
-$file = "/var/spool/cloud/meta-data/instance-id";
+$file = "/tmp/server.metadata";
 if (file_exists($file)) {
     readfile($file);
 }
 else
 {
-	echo "Unknown Instance";
+	echo "No meta data available!";
 }
 
 echo "</center></b>";
