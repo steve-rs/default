@@ -1,6 +1,7 @@
 <?php
 
 include 'config/db.php';
+include 'menu.php';
 
 echo "<center>";
 echo "<font size='+3'>";

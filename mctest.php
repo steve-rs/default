@@ -1,5 +1,7 @@
 <?php
 
+include 'menu.php';
+
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
     ob_clean();

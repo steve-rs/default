@@ -1,8 +1,8 @@
 <?php
-include 'config/db.php';
 
-    ob_clean();
-    flush();
+include 'config/db.php';
+    #ob_clean();
+    #flush();
 
 include 'menu.php';
 

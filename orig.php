@@ -1,6 +1,7 @@
 <?php
 
 include 'config/db.php';
+include 'menu.php';
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
