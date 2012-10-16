@@ -1,6 +1,6 @@
 <?php
 
-include 'menu.php';
+include 'meta.php';
 
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {

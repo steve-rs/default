@@ -1,6 +1,6 @@
 <?php
 
-include 'menu.php';
+include 'meta.php';
 
 echo "<b><center>";
 
