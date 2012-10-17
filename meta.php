@@ -28,5 +28,7 @@ else
 
 echo "</center></b>";
 
+echo "<br/>";
+
 ?>
 
