@@ -41,7 +41,7 @@ $geoplugin->locate('209.85.171.100');
 */
 
 //locate the IP
-$geoplugin->locate();
+$geoplugin->locate("23.20.26.42");
 
 echo "Geolocation results for {$geoplugin->ip}: <br />\n".
 	"City: {$geoplugin->city} <br />\n".
