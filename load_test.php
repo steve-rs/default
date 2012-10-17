@@ -6,9 +6,6 @@ include 'meta.php';
 
 isset ( $database_DB ) or die( "Database name not set");
 
-#string gethostbyname ( string $hostname )
-echo "Master DB IP Address (" . gethostbyname ( $hostname_DB ) . ")<br/>\n";
-
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 #@mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB' on host '$hostname_DB' using username '$username_DB'");
@@ -19,7 +16,11 @@ $num=mysql_numrows($result);
 
 mysql_close();
 
-echo "<b><center> Database ($database_DB) output from host ($hostname_DB)</center></b><br><br>";
+echo "<b><center>";
+echo "Database ($database_DB)<br/> host ($hostname_DB : " . gethostbyname ( $hostname_DB ) . ")";
+echo "</center></b>";
+echo "<br><br>";
+echo "Master DB IP Address (" . gethostbyname ( $hostname_DB ) . ")<br/>\n";
 
 #$file = "/var/spool/cloud/meta-data/instance-id";
 #if (file_exists($file)) {
