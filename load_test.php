@@ -9,6 +9,41 @@ isset ( $database_DB ) or die( "Database name not set");
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 #@mysql_select_db($database_DB) or die( "Unable to select database '$database_DB'");
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB' on host '$hostname_DB' using username '$username_DB'");
+
+$query="SELECT * FROM app_test";
+$result=mysql_query($query);
+$num=mysql_numrows($result);
+
+$id_top = mysql_result($result,0,"id");
+$id_bottom = $id_top + $num;
+
+$#id_rm = rand($id_top, $id_bottom);
+#$query="DELETE FROM app_test where id = $id_rm";
+#$result=mysql_query($query);
+
+$lcv = 0;
+$row_to_delete = rand ( 0, $num-1 );
+$result = mysql_query("SELECT * FROM app_test");
+while($row = mysql_fetch_array($result)){
+     if($lcv == $row_to_delete){
+          mysql_query("DELETE FROM app_test where id = $row[0]");
+#echo "DEL $lcv";
+     }
+     $lcv++;
+}
+
+#$column = array();
+#while($row = mysql_fetch_array($result)) {
+#    $column[] = $row[0];
+#}
+#echo "vol= $column <br>";
+#echo "row= $row <br>";
+
+$query="insert into app_test values ('', 'Random data', '" . rand(0, 999) . "')";
+$result=mysql_query($query);
+
+echo "num=$num<br>";
+
 $query="SELECT * FROM app_test";
 $result=mysql_query($query);
 
@@ -27,11 +62,12 @@ echo "<font size='+4'>";
 
 $i=0;
 while ($i < $num) {
+   $id=mysql_result($result,$i,"id");
    $name=mysql_result($result,$i,"name");
    $value=mysql_result($result,$i,"value");
 
    echo "<tr>";
-   echo "<td>$name</td><td>$value</td>";
+   echo "<td>$id</td><td>$name</td><td>$value</td>";
    echo "</tr>";
 
    $i++;

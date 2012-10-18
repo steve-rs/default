@@ -11,14 +11,15 @@ mysql_connect($hostname_DB,$username_DB,$password_DB);
 $query="delete FROM app_test";
 $result=mysql_query($query);
 
-$query="insert into app_test values (1, 'Row one')";
+$query="insert into app_test values ('', 'Row one', 'a')";
 $result=mysql_query($query);
-$query="insert into app_test values (2, 'Row two')";
+$query="insert into app_test values ('', 'Row two', 'a')";
 $result=mysql_query($query);
-$query="insert into app_test values (3, 'Row three')";
+$query="insert into app_test values ('', 'Row three', 'a')";
 $result=mysql_query($query);
 
 $query="select * FROM app_test";
+$result=mysql_query($query);
 $num=mysql_numrows($result);
 
 mysql_close();
@@ -34,11 +35,12 @@ echo "<font size='+4'>";
 
 $i=0;
 while ($i < $num) {
+   $id=mysql_result($result,$i,"id");
    $name=mysql_result($result,$i,"name");
    $value=mysql_result($result,$i,"value");
 
    echo "<tr>";
-   echo "<td>$name</td><td>$value</td>";
+   echo "<td>$id</td><td>$name</td><td>$value</td>";
    echo "</tr>";
 
    $i++;
