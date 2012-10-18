@@ -76,6 +76,7 @@ if ( isset ($pub_ip) ) {
 
 	if ( $geoplugin->longitude != "" )
 	{
+		echo "</td><td>";
 ?>
 	<iframe width="250" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=4&amp;ll=<?php echo $lati ?>,<?php echo $long ?>&amp;output=embed"></iframe>
