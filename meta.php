@@ -19,13 +19,12 @@ if (file_exists($file)) {
 			{
 				if ( preg_match ( '/\d+\.\d+\.\d+\.\d+/', $line ) )
 				{
-					$pub_ip = $line;
-					echo "Matched [$pub_ip]<br>";
+					if ( ! preg_match ( '/10\.\d+\.\d+\.\d+/', $line ) )
+					{
+						$pub_ip = $line;
+						echo "Matched [$pub_ip]<br>";
+					}
 				}
-			}
-			else
-			{
-				echo "Not matched [$line]<br>";
 			}
 		}
 	}
