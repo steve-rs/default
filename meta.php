@@ -57,7 +57,7 @@ echo "</td>";
 if ( isset ($pub_ip) ) {
 	echo "<td>";
 
-	echo "<b>Location of public IP [$pub_ip]</b><br/>";
+	echo "<b>Server location [$pub_ip]:</b><br/>";
 
 	require_once('geo/geoplugin.class.php');
 	$geoplugin = new geoPlugin();
