@@ -1,4 +1,5 @@
 <p>
+| <a href="geo.php">geo</a> 
 | <a href="health.php">health</a> 
 | <a href="index.php">index</a> 
 | <a href="load_test.php">load_test</a> 

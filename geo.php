@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Map</title>
+<title>Demo App</title>
 </head>
 <body>
 
@@ -18,10 +18,6 @@ $geoplugin->locate("23.20.26.42");
 <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;sspn=40.188298,79.101563&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=7&amp;ll=<?php $geoplugin->longitude ?>,<?php $geoplugin->latitude ?>&amp;output=embed"></iframe>
 
 <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;sspn=40.188298,79.101563&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=7&amp;ll=39.043701171875,-77.487503051758&amp;output=embed"></iframe>
-
-<!--Longitude: -77.487503051758 
-Latitude: 39.043701171875 
--->
 
 <br />
 
