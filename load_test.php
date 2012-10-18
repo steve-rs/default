@@ -2,7 +2,8 @@
 
 include 'config/db.php';
 
-include 'meta.php';
+#include 'meta.php';  # If doing load testing, DO NOT make many requests to Geo API, otherwise you get blocked!
+include 'menu.php';  
 
 isset ( $database_DB ) or die( "Database name not set");
 
