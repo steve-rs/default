@@ -8,7 +8,7 @@ isset ( $database_DB ) or die( "Database name not set");
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB' on host '$hostname_DB' using username '$username_DB'");
-$query="delete * FROM app_test";
+$query="delete FROM app_test";
 $result=mysql_query($query);
 
 $query="insert into app_test values (1, 'Row one')";
@@ -18,6 +18,7 @@ $result=mysql_query($query);
 $query="insert into app_test values (3, 'Row three')";
 $result=mysql_query($query);
 
+$query="select * FROM app_test";
 $num=mysql_numrows($result);
 
 mysql_close();
