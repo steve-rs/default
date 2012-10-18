@@ -12,7 +12,9 @@ $query="delete * FROM app_test";
 $result=mysql_query($query);
 
 $query="insert into app_test values (1, 'Row one')";
+$result=mysql_query($query);
 $query="insert into app_test values (2, 'Row two')";
+$result=mysql_query($query);
 $query="insert into app_test values (3, 'Row three')";
 $result=mysql_query($query);
 
