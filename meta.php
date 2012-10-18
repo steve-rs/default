@@ -55,9 +55,7 @@ else
 echo "</td>";
 
 if ( isset ($pub_ip) ) {
-	echo "<td>";
-
-	echo "<b>Server location [$pub_ip]:</b><br/><br/>";
+	echo "<td valign='top'>";
 
 	require_once('geo/geoplugin.class.php');
 	$geoplugin = new geoPlugin();
@@ -67,16 +65,22 @@ if ( isset ($pub_ip) ) {
 	#echo "long = $long <br>";
 	#echo "lati = $lati <br>";
 
+	if ( $geoplugin->countryName != "" or $geoplugin->city != "" )
+	{
+		echo "<b>Server location [$pub_ip]:</b><br/><br/>";
+	}
+
 	if ( $geoplugin->city != "" ) { echo "City: {$geoplugin->city} <br />\n"; }
 	if ( $geoplugin->region != "" ) { echo "Region: {$geoplugin->region} <br />\n"; }
-	if ( $geoplugin->areaCode != "" ) { echo "Area Code: {$geoplugin->areaCode} <br />\n"; }
-	if ( $geoplugin->dmaCode != "" ) { echo "DMA Code: {$geoplugin->dmaCode} <br />\n"; }
+	#if ( $geoplugin->areaCode != "" ) { echo "Area Code: {$geoplugin->areaCode} <br />\n"; }
+	#if ( $geoplugin->dmaCode != "" ) { echo "DMA Code: {$geoplugin->dmaCode} <br />\n"; }
 	if ( $geoplugin->countryName != "" ) { echo "Country Name: {$geoplugin->countryName} <br />\n"; }
 	if ( $geoplugin->countryCode != "" ) { echo "Country Code: {$geoplugin->countryCode} <br />\n"; }
 
 	if ( $geoplugin->longitude != "" )
 	{
-		echo "</td><td>";
+		echo "</td>";
+		echo "<td valign='top'>";
 ?>
 	<iframe width="250" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=4&amp;ll=<?php echo $lati ?>,<?php echo $long ?>&amp;output=embed"></iframe>
