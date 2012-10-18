@@ -11,6 +11,7 @@ if ($handle = opendir('.')) {
     }
 
     echo "| <a href=\"haproxy-status\">haproxy-status</a> ";
+    echo "|";
 
     closedir($handle);
 }
