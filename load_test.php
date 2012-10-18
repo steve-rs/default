@@ -33,6 +33,9 @@ $result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
 # Insert a new row 
 $query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
 $result=mysql_query($query);
+# Insert a new row 
+$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
+$result=mysql_query($query);
 
 # Output the table
 $query="SELECT * FROM app_test order by value";
