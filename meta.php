@@ -16,7 +16,7 @@ if (file_exists($file)) {
             echo htmlspecialchars($line) . "<br />\n";
         }
 	if ( ! isset ( $pub_ip ) ) {
-		if ( preg_match ( '\d+\.\d+\.\d+\.\d+/', $line ) ) {
+		if ( preg_match ( '/\d+\.\d+\.\d+\.\d+/', $line ) ) {
 #int preg_match ( string $pattern , string $subject
 			$pub_ip = $line;
 			echo "Matched [$line]";
