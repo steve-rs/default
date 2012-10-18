@@ -36,7 +36,7 @@ $i++;
 }
 echo '</center>';
 
-echo "<b> Starting PHPINFO: </b><hr>";
-phpinfo();
+#echo "<b> Starting PHPINFO: </b><hr>";
+#phpinfo();
 ?>
 

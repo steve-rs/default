@@ -39,8 +39,8 @@ while ($i < $num) {
 echo '</table>';
 echo '</font>';
 
-echo "<b> Starting PHPINFO: </b><hr>";
-echo '</center>';
+#echo "<b> Starting PHPINFO: </b><hr>";
+#echo '</center>';
 #phpinfo();
 
 ?>
