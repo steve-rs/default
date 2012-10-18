@@ -67,12 +67,12 @@ if ( isset ($pub_ip) ) {
 	#echo "long = $long <br>";
 	#echo "lati = $lati <br>";
 
-	if ( isset ( $geoplugin->city ) { echo "City: {$geoplugin->city} <br />\n"; }
-	if ( isset ( $geoplugin->region ) { echo "Region: {$geoplugin->region} <br />\n"; }
-	if ( isset ( $geoplugin->areaCode ) { echo "Area Code: {$geoplugin->areaCode} <br />\n"; }
-	if ( isset ( $geoplugin->dmaCode ) { echo "DMA Code: {$geoplugin->dmaCode} <br />\n"; }
-	if ( isset ( $geoplugin->countryName ) { echo "Country Name: {$geoplugin->countryName} <br />\n"; }
-	if ( isset ( $geoplugin->countryCode ) { echo "Country Code: {$geoplugin->countryCode} <br />\n"; }
+	if ( isset ( $geoplugin->city ) ) { echo "City: {$geoplugin->city} <br />\n"; }
+	if ( isset ( $geoplugin->region ) ) { echo "Region: {$geoplugin->region} <br />\n"; }
+	if ( isset ( $geoplugin->areaCode ) ) { echo "Area Code: {$geoplugin->areaCode} <br />\n"; }
+	if ( isset ( $geoplugin->dmaCode ) ) { echo "DMA Code: {$geoplugin->dmaCode} <br />\n"; }
+	if ( isset ( $geoplugin->countryName ) ) { echo "Country Name: {$geoplugin->countryName} <br />\n"; }
+	if ( isset ( $geoplugin->countryCode ) ) { echo "Country Code: {$geoplugin->countryCode} <br />\n"; }
 
 	if ( isset ( $geoplugin->longitude ) )
 	{
