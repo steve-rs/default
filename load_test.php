@@ -17,7 +17,7 @@ $num=mysql_numrows($result);
 # Delete a random row from the table
 $lcv = 0;
 $row_to_delete = rand ( 0, $num-1 );
-$result = mysql_query("SELECT * FROM app_test");
+$result = mysql_query("SELECT * FROM app_test order by value");
 while($row = mysql_fetch_array($result)){
      if($lcv == $row_to_delete){
           mysql_query("DELETE FROM app_test where id = $row[0]");
