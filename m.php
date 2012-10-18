@@ -1,21 +1,21 @@
 <?php
 
-if ($handle = opendir('.')) {
-    echo "Directory handle: $handle\n";
-    echo "Entries:\n";
+echo "<p>";
 
-    /* This is the correct way to loop over the directory. */
+if ($handle = opendir('.')) {
     while (false !== ($entry = readdir($handle))) {
-	if ( preg_match ( '/^(.*)\.php$/', $entry, $match ) )
+	if ( preg_match ( '/^(.*)\.(php|html)$/', $entry, $match ) )
 	{
-        	echo "$match[0] - ";
-        	echo "$match[1]<br>";
+        	echo "| <a href=\"$entry\">$match[1]</a>\n";
 	}
-       	echo "[$entry]<br>";
     }
+
+    echo "| <a href=\"haproxy-status\">haproxy-status</a> ";
 
     closedir($handle);
 }
+
+echo "</p>";
 
 ?>
 
