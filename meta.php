@@ -8,7 +8,7 @@ $file = "/tmp/server.metadata";
 
 echo "<table>";
 echo "<tr>";
-echo "<td>";
+echo "<td valign='top'>";
 
 if (file_exists($file)) {
 	#readfile($file);
@@ -16,9 +16,11 @@ if (file_exists($file)) {
 	// Loop through our array, show HTML source as HTML source; and line numbers too.
 	if ( $lines )
 	{
+		echo "<b>Server meta-data:</b><br/><br/>";
+
 		foreach ($lines as $line)
 		{
-			echo htmlspecialchars($line) . "<br />\n";
+			echo "<b>" . htmlspecialchars($line) . "</b><br />\n";
 
 			# Look for public IP
 			if ( ! isset ( $pub_ip ) )
@@ -42,12 +44,12 @@ if (file_exists($file)) {
 	}
 	else
 	{
-		echo "Meta data file is emply!";
+		echo "<b>Meta data file is emply!</b>";
 	}
 }
 else
 {
-	echo "Meta data file missing or unreadable!";
+	echo "<b>Meta data file missing or unreadable!</b>";
 }
 
 echo "</td>";
