@@ -14,36 +14,22 @@ $query="SELECT * FROM app_test";
 $result=mysql_query($query);
 $num=mysql_numrows($result);
 
-$id_top = mysql_result($result,0,"id");
-$id_bottom = $id_top + $num;
-
-$#id_rm = rand($id_top, $id_bottom);
-#$query="DELETE FROM app_test where id = $id_rm";
-#$result=mysql_query($query);
-
+# Delete a random row from the table
 $lcv = 0;
 $row_to_delete = rand ( 0, $num-1 );
 $result = mysql_query("SELECT * FROM app_test");
 while($row = mysql_fetch_array($result)){
      if($lcv == $row_to_delete){
           mysql_query("DELETE FROM app_test where id = $row[0]");
-#echo "DEL $lcv";
      }
      $lcv++;
 }
 
-#$column = array();
-#while($row = mysql_fetch_array($result)) {
-#    $column[] = $row[0];
-#}
-#echo "vol= $column <br>";
-#echo "row= $row <br>";
-
+# Insert a new row 
 $query="insert into app_test values ('', 'Random data', '" . rand(0, 999) . "')";
 $result=mysql_query($query);
 
-echo "num=$num<br>";
-
+# Output the table
 $query="SELECT * FROM app_test";
 $result=mysql_query($query);
 
