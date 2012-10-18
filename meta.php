@@ -15,13 +15,17 @@ if (file_exists($file)) {
         foreach ($lines as $line) {
             echo htmlspecialchars($line) . "<br />\n";
         }
-	if ( ! isset ( $pub_ip ) ) {
+#	if ( ! isset ( $pub_ip ) ) {
 		if ( preg_match ( '/\d+\.\d+\.\d+\.\d+/', $line ) ) {
 #int preg_match ( string $pattern , string $subject
 			$pub_ip = $line;
-			echo "Matched [$line]";
+			echo "Matched [$pub_ip]<br>";
 		}
-	}
+		else
+		{
+			echo "Not matched [$line]<br>";
+		}
+#	}
     }
     else
     {
