@@ -21,14 +21,12 @@ echo "<font size='+4'>";
 echo "<table border=3 cellpadding=8>";
 $i=0;
 while ($i < $num) {
-#   $id = mysql_result($result,$i, "id");
-#   $fn = mysql_result($result,$i, "firstname");
-#   $ln = mysql_result($result,$i, "lastname");
+   $id = mysql_result($result,$i, "id");
    $name=mysql_result($result,$i,"name");
    $value=mysql_result($result,$i,"value");
 
    echo "<tr>";
-   echo "<td>$name</td><td>$value</td>";
+   echo "<td>$id</td><td>$name</td><td>$value</td>";
    echo "</tr>";
 
    $i++;
