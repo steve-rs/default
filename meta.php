@@ -7,30 +7,32 @@ echo "<b><center>";
 $file = "/tmp/server.metadata";
 
 if (file_exists($file)) {
-    #readfile($file);
-    $lines = file($file);
-    // Loop through our array, show HTML source as HTML source; and line numbers too.
-    if ( $lines )
-    {
-        foreach ($lines as $line) {
-            echo htmlspecialchars($line) . "<br />\n";
-        }
-#	if ( ! isset ( $pub_ip ) ) {
-		if ( preg_match ( '/\d+\.\d+\.\d+\.\d+/', $line ) ) {
-#int preg_match ( string $pattern , string $subject
-			$pub_ip = $line;
-			echo "Matched [$pub_ip]<br>";
-		}
-		else
+	#readfile($file);
+	$lines = file($file);
+	// Loop through our array, show HTML source as HTML source; and line numbers too.
+	if ( $lines )
+	{
+		foreach ($lines as $line)
 		{
-			echo "Not matched [$line]<br>";
+			echo htmlspecialchars($line) . "<br />\n";
+			if ( ! isset ( $pub_ip ) )
+			{
+				if ( preg_match ( '/\d+\.\d+\.\d+\.\d+/', $line ) )
+				{
+					$pub_ip = $line;
+					echo "Matched [$pub_ip]<br>";
+				}
+			}
+			else
+			{
+				echo "Not matched [$line]<br>";
+			}
 		}
-#	}
-    }
-    else
-    {
-        echo "Meta data file is emply!";
-    }
+	}
+	else
+	{
+		echo "Meta data file is emply!";
+	}
 }
 else
 {
