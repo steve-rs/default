@@ -20,7 +20,6 @@ $max_value = 9;
 # Delete a random row from the table
 #$lcv = 0;
 $values_to_delete = rand ( 0, $max_value );
-echo "values_to_delete = $values_to_delete<br>";
 $result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
 
 #$result = mysql_query("SELECT * FROM app_test order by value");
@@ -36,7 +35,7 @@ $query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_valu
 $result=mysql_query($query);
 
 # Output the table
-$query="SELECT * FROM app_test";
+$query="SELECT * FROM app_test order by value";
 $result=mysql_query($query);
 
 $num=mysql_numrows($result);
