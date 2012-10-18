@@ -6,24 +6,6 @@ include 'meta.php';
 echo "<center>";
 echo "<font size='+3'>";
 
-echo "Instance ID = ";
-$file = "/var/spool/cloud/meta-data/instance-id";
-if (file_exists($file)) {
-#    ob_clean();
-#    flush();
-    readfile($file);
-}
-echo "<p>";
-
-echo "Cloud = ";
-$file = "/var/spool/cloud/meta-data/placement-availability-zone";
-if (file_exists($file)) {
-#    ob_clean();
-#    flush();
-    readfile($file);
-}
-echo "<p>";
-
 echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
