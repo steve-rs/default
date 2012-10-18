@@ -40,7 +40,7 @@ while ($i < $num) {
 echo "<b> Starting PHPINFO: </b><hr>";
 echo '</center>';
 
-phpinfo();
+#phpinfo();
 
 ?>
 
