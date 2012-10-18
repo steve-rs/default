@@ -64,8 +64,6 @@ if ( isset ($pub_ip) ) {
 	$long = $geoplugin->longitude;
 	$lati = $geoplugin->latitude;
 
-	echo "[$pub_ip]";
-
 	if ( $geoplugin->countryName != "" or $geoplugin->city != "" )
 	{
 		echo "<b>Server location [$pub_ip]:</b><br/><br/>";
