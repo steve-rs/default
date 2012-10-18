@@ -66,8 +66,16 @@ if ( isset ($pub_ip) ) {
 	$lati = $geoplugin->latitude;
 	#echo "long = $long <br>";
 	#echo "lati = $lati <br>";
+
+	echo "City: {$geoplugin->city} <br />\n";
+	echo "Region: {$geoplugin->region} <br />\n";
+	echo "Area Code: {$geoplugin->areaCode} <br />\n";
+	echo "DMA Code: {$geoplugin->dmaCode} <br />\n";
+	echo "Country Name: {$geoplugin->countryName} <br />\n";
+	echo "Country Code: {$geoplugin->countryCode} <br />\n";
+
 ?>
-	<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+	<iframe width="250" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=4&amp;ll=<?php echo $lati ?>,<?php echo $long ?>&amp;output=embed"></iframe>
 <?php
 	echo "</td>";

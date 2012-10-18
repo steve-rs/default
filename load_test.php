@@ -43,6 +43,8 @@ echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . getho
 echo "</b>";
 echo "<br><br>";
 
+echo "Number of rows: $num<br>";
+
 echo "<table border=3 cellpadding=8>";
 echo "<font size='+4'>";
 
