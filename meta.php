@@ -21,7 +21,7 @@ if (file_exists($file)) {
 			$pub_ip = $line;
 			echo "Matched [$line]";
 		}
-	{
+	}
     }
     else
     {
