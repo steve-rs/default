@@ -11,11 +11,11 @@ mysql_connect($hostname_DB,$username_DB,$password_DB);
 $query="delete FROM app_test";
 $result=mysql_query($query);
 
-$query="insert into app_test values ('', 'Row one', 'a')";
+$query="insert into app_test values ('', 'Row one', '" . rand (0, 9) . "')";
 $result=mysql_query($query);
-$query="insert into app_test values ('', 'Row two', 'a')";
+$query="insert into app_test values ('', 'Row two', '" . rand (0, 9) . "')";
 $result=mysql_query($query);
-$query="insert into app_test values ('', 'Row three', 'a')";
+$query="insert into app_test values ('', 'Row three', '" . rand (0, 9) . "')";
 $result=mysql_query($query);
 
 $query="select * FROM app_test";
