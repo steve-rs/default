@@ -17,29 +17,33 @@ $num=mysql_numrows($result);
 mysql_close();
 
 echo "<b><center>";
-echo "Database ($database_DB)<br/> host ($hostname_DB : " . gethostbyname ( $hostname_DB ) . ")";
+echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . gethostbyname ( $hostname_DB ) . ")";
 echo "</center></b>";
 echo "<br><br>";
 echo "Master DB IP Address (" . gethostbyname ( $hostname_DB ) . ")<br/>\n";
 
-#$file = "/var/spool/cloud/meta-data/instance-id";
-#if (file_exists($file)) {
-#    readfile($file);
-#}
-
 echo '<p><center>';
 
+echo '</font>';
+echo "<font size='+4'>";
+echo "<table border=3 cellpadding=8>";
 $i=0;
 while ($i < $num) {
    $name=mysql_result($result,$i,"name");
    $value=mysql_result($result,$i,"value");
-   echo "<b>$name:$value</b><br><hr><br>";
+
+   echo "<tr>";
+   echo "<td>$name</td><td>$value</td>";
+   echo "</tr>";
+
    $i++;
 }
+echo '</table>';
+echo '</font>';
+echo '</center>';
 
 echo "<b> Starting PHPINFO: </b><hr>";
 echo '</center>';
-
 #phpinfo();
 
 ?>
