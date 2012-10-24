@@ -20,7 +20,7 @@ $max_value = 9;
 # Delete a random row from the table
 #$lcv = 0;
 # Run DELETE once in every 10
-chance = rand ( 1, 10 );
+$chance = rand ( 1, 10 );
 $values_to_delete = rand ( 0, $max_value );
 if ( $chance == 1 )
 {
@@ -36,7 +36,7 @@ if ( $chance == 1 )
 #}
 
 # Run INSERTs once in every 10
-chance = rand ( 1, 10 );
+$chance = rand ( 1, 10 );
 if ( $chance == 1 )
 {
 	# Insert a new row 
