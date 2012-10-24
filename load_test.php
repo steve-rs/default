@@ -19,8 +19,13 @@ $max_value = 9;
 
 # Delete a random row from the table
 #$lcv = 0;
+# Run DELETE once in every 10
+chance = rand ( 1, 10 );
 $values_to_delete = rand ( 0, $max_value );
-$result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
+if ( $chance == 1 )
+{
+	$result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
+}
 
 #$result = mysql_query("SELECT * FROM app_test order by value");
 #while($row = mysql_fetch_array($result)){
@@ -30,12 +35,17 @@ $result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
 #     $lcv++;
 #}
 
-# Insert a new row 
-$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
-$result=mysql_query($query);
-# Insert a new row 
-$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
-$result=mysql_query($query);
+# Run INSERTs once in every 10
+chance = rand ( 1, 10 );
+if ( $chance == 1 )
+{
+	# Insert a new row 
+	$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
+	$result=mysql_query($query);
+	# Insert a new row 
+	$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
+	$result=mysql_query($query);
+}
 
 # Output the table
 $query="SELECT * FROM app_test order by value";
