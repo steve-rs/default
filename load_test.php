@@ -71,9 +71,9 @@ while ($i < $num) {
 echo '</table>';
 echo '</font>';
 
-#echo "<b> Starting PHPINFO: </b><hr>";
-#echo '</center>';
-#phpinfo();
+echo "<hr><p> Starting PHPINFO: </p><hr>";
+echo '</center>';
+phpinfo();
 
 ?>
 
