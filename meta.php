@@ -82,7 +82,7 @@ if ( isset ($pub_ip) ) {
 		echo "<td valign='top'>";
 ?>
 	<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=4&amp;ll=<?php echo $lati ?>,<?php echo $long ?>&amp;output=embed"></iframe>
+src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=3&amp;ie=UTF8&amp;hq=&amp;t=m&amp;z=3&amp;ll=<?php echo $lati ?>,<?php echo $long ?>&amp;output=embed"></iframe>
 <?php
 	}
 
