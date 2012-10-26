@@ -80,10 +80,10 @@ while ($i < $num) {
 }
 echo '</table>';
 echo '</font>';
-
-echo "<hr><p> Starting PHPINFO: </p><hr>";
 echo '</center>';
-phpinfo();
+
+#echo "<center><hr><p> Starting PHPINFO: </p><hr></center>";
+#phpinfo();
 
 ?>
 
