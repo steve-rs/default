@@ -16,14 +16,26 @@ closedir($handle);
 
 sort($files, SORT_LOCALE_STRING); 
 
-foreach ($files as $entry) { 
+$tooltip = array(
+    "menu" => "Displays the menu bar",
+    "index" => "Shows the meta data and the content of the db table, but no changes are made to the db",
+    "load_test" => "Makes random changes to the db table and then displays its content",
+    "health" => "Used by the load balancer to check the app server is responding",
+    "meta" => "Shows just the server's meta data and map location",
+    "reset_db" => "Empties the db table and inserts a couple of rows",
+    "mctest" => "Shows use of a memcache server, if available",
+    "haproxystatus" => "Shows status of load balancer",
+);
+
+foreach ($files as $entry) {
 	if ( preg_match ( '/^(.*)\.(php|html)$/', $entry, $match ) )
 	{
-        	echo "| <a href=\"$entry\">$match[1]</a>\n";
+		$m = $match[1];
+		echo "| <a href=\"$entry\" title=\"$tooltip[$m]\">$m</a>\n";
 	}
 }
 
-echo "| <a href=\"haproxy-status\">haproxy-status</a> ";
+echo "| <a href=\"haproxy-status\" title=\"$tooltip[haproxystatus]\">haproxy-status</a> ";
 echo "|";
 
 echo "</p>";
