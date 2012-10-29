@@ -25,6 +25,7 @@ $values_to_delete = rand ( 0, $max_value );
 if ( $chance == 1 )
 {
 	$result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
+	echo "Deleted all rows with the value '$values_to_delete'<br>";
 }
 
 #$result = mysql_query("SELECT * FROM app_test order by value");
@@ -45,6 +46,7 @@ if ( $chance == 1 )
 	# Insert a new row 
 	$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
 	$result=mysql_query($query);
+	echo "Inserted two rows<br>";
 }
 
 # Output the table
