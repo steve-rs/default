@@ -62,9 +62,9 @@ echo "</b>";
 echo "<br><br>";
 
 if ( $chance1 == 1 )
-	echo "Deleted all rows with the value '$values_to_delete'<br>";
+	echo "Deleted all rows with the value '$values_to_delete'.<br>";
 if ( $chance2 == 1 )
-	echo "Inserted two rows<br>";
+	echo "Inserted two rows.<br>";
 
 echo "Number of rows: $num<br>";
 
