@@ -6,7 +6,8 @@ include 'meta.php';
 echo "<center>";
 echo "<font size='+3'>";
 
-echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
+#echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
+echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . gethostbyname ( $hostname_DB ) . ")";
 
 mysql_connect($hostname_DB,$username_DB,$password_DB);
 @mysql_select_db($database_DB) or die( "Unable to select database '$database_DB' on host '$hostname_DB' using username '$username_DB'");
