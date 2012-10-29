@@ -20,12 +20,11 @@ $max_value = 9;
 # Delete a random row from the table
 #$lcv = 0;
 # Run DELETE once in every 10
-$chance = rand ( 1, 30 );
+$chance1 = rand ( 1, 30 );
 $values_to_delete = rand ( 0, $max_value );
-if ( $chance == 1 )
+if ( $chance1 == 1 )
 {
 	$result = mysql_query("DELETE FROM app_test WHERE value = $values_to_delete");
-	echo "Deleted all rows with the value '$values_to_delete'<br>";
 }
 
 #$result = mysql_query("SELECT * FROM app_test order by value");
@@ -37,8 +36,8 @@ if ( $chance == 1 )
 #}
 
 # Run INSERTs once in every 10
-$chance = rand ( 1, 20 );
-if ( $chance == 1 )
+$chance2 = rand ( 1, 20 );
+if ( $chance2 == 1 )
 {
 	# Insert a new row 
 	$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
@@ -46,7 +45,6 @@ if ( $chance == 1 )
 	# Insert a new row 
 	$query = "insert into app_test values ('', 'Random data', '" . rand(0, $max_value) . "')";
 	$result=mysql_query($query);
-	echo "Inserted two rows<br>";
 }
 
 # Output the table
@@ -62,6 +60,11 @@ echo "<center>";
 echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . gethostbyname ( $hostname_DB ) . ")";
 echo "</b>";
 echo "<br><br>";
+
+if ( $chance1 == 1 )
+	echo "Deleted all rows with the value '$values_to_delete'<br>";
+if ( $chance2 == 1 )
+	echo "Inserted two rows<br>";
 
 echo "Number of rows: $num<br>";
 
