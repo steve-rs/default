@@ -4,7 +4,7 @@ include 'config/db.php';
 include 'meta.php';
 
 echo "<center>";
-echo "<font size='+0'>";
+echo "<font size='+1'>";
 
 #echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
 echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . gethostbyname ( $hostname_DB ) . ")";
@@ -18,7 +18,7 @@ $num=mysql_numrows($result);
 mysql_close();
 
 echo '</font>';
-echo "<font size='+4'>";
+echo "<font size='+2'>";
 echo "<table border=3 cellpadding=8>";
 $i=0;
 while ($i < $num) {
