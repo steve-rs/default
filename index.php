@@ -4,7 +4,7 @@ include 'config/db.php';
 include 'meta.php';
 
 echo "<center>";
-echo "<font size='+3'>";
+echo "<font size='+0'>";
 
 #echo "<b>Database($database_DB) Output From Host($hostname_DB)</b><p>";
 echo "Database ($database_DB)<br/>hostname ($hostname_DB)<br/>host ip (" . gethostbyname ( $hostname_DB ) . ")";
