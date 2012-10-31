@@ -87,9 +87,9 @@ echo '</table>';
 echo '</font>';
 echo '</center>';
 
-# Use some CPU
+# Generate some cpu load 
 $v = 7;
-for ( $i = 0; $i < 100000; $i++ )
+for ( $i = 0; $i < 10000; $i++ )
 {
 	$v = ( $v * $v ) / 3.8765;
 }
