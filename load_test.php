@@ -89,7 +89,7 @@ echo '</center>';
 
 # Use some CPU
 $v = 7;
-for ( $i = 0; $i < 1000; $i++ )
+for ( $i = 0; $i < 100000; $i++ )
 {
 	$v = ( $v * $v ) / 3.8765;
 }
