@@ -89,7 +89,7 @@ echo '</center>';
 
 # Generate some cpu load 
 $v = 7;
-for ( $i = 0; $i < 5000; $i++ )
+for ( $i = 0; $i < 2000; $i++ )
 {
 	$v = ( $v * $v ) / 3.8765;
 }
