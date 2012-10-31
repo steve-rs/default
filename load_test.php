@@ -87,6 +87,13 @@ echo '</table>';
 echo '</font>';
 echo '</center>';
 
+# Use some CPU
+$v = 7;
+for ( $i = 0; $i < 1000; $i++ )
+{
+	$v = ( $v * $v ) / 3.8765;
+}
+
 #echo "<center><hr><p> Starting PHPINFO: </p><hr></center>";
 #phpinfo();
 
