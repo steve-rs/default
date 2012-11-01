@@ -87,12 +87,12 @@ echo '</table>';
 echo '</font>';
 echo '</center>';
 
-# Generate some cpu load 
-$v = 7;
-for ( $i = 0; $i < 2000; $i++ )
-{
-	$v = ( $v * $v ) / 3.8765;
-}
+# Generate some cpu load - does not work well
+#$v = 7;
+#for ( $i = 0; $i < 2000; $i++ )
+#{
+#	$v = ( $v * $v ) / 3.8765;
+#}
 
 #echo "<center><hr><p> Starting PHPINFO: </p><hr></center>";
 #phpinfo();
