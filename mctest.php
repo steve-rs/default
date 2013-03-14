@@ -22,9 +22,9 @@ $v = htmlspecialchars($_GET["v"]);
 $c = htmlspecialchars($_GET["c"]);
 $s = htmlspecialchars($_GET["s"]);
 
-//$v = 1;      # Value
-//$c = 9999999; # Count
-//$s = 0.487439874;      # Step
+if (! isset($v)) $v = 1;      		# Value
+if (! isset($c)) $c = 9999999;  	# Count
+if (! isset($s)) $s = 0.487439874;      # Step
 
 $key = $v . "-" . $c . "-" . $s;
 
