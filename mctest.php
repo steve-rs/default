@@ -1,7 +1,7 @@
 <?php
 
 include 'meta.php';
-include 'configure.php';
+require_once 'configure.php';
 
 if ( ! isset($memcache_server) )
 {
