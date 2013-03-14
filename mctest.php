@@ -3,7 +3,7 @@
 include 'meta.php';
 include 'configure.php';
 
-if ( ! isset("$memcache_server") )
+if ( ! isset($memcache_server) )
 {
     die("Memcache server hostname not set ... aborting.");
 }
