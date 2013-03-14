@@ -7,7 +7,7 @@ if ( ! isset("$memcache_server") )
 {
     die("Memcache server hostname not set ... aborting.");
 }
-
+ 
 $file = "/var/spool/cloud/meta-data/instance-id";
 if (file_exists($file)) {
     readfile($file);
