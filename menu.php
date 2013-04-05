@@ -44,7 +44,7 @@ caption {
 <body>
 ';
 
-echo "<p>";
+echo "<p><center>";
 #if ($handle = opendir('.')) {
 
 $handle = opendir('.') or die("Error opening directory '.'");
@@ -81,7 +81,7 @@ foreach ($files as $entry) {
 echo "| <a href=\"haproxy-status\" title=\"$tooltip[haproxystatus]\">haproxy-status</a> ";
 echo "|";
 
-echo "</p>";
+echo "</center></p>";
 
 ?>
 
