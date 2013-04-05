@@ -1,7 +1,50 @@
 <?php
 
-echo "<p>";
+echo '
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+	background: #ffffff;
+	margin: 0;
+	padding: 20px;
+	line-height: 1.4em;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 100;
+}
 
+table {
+	margin: 0;
+	background: #FFFFFF;
+	border: 1px solid #333333;
+	border-collapse: collapse;
+}
+
+td, th {
+	border-bottom: 1px solid #333333;
+	padding: 6px 16px;
+	text-align: left;
+}
+
+th {
+	background: #EEEEEE;
+}
+
+caption {
+	background: #E0E0E0;
+	margin: 0;
+	border: 1px solid #333333;
+	border-bottom: none;
+	padding: 6px 16px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+';
+
+echo "<p>";
 #if ($handle = opendir('.')) {
 
 $handle = opendir('.') or die("Error opening directory '.'");
